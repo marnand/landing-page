@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "partials/header.html" %}
+{% endblock header %}
+
+{% block form %}
+
+<form action="/save" name="registration" method="POST">
+    <legend>Preencha o formulário a partir da sua caminhada webmaster</legend>
+
+    <label for="">Nome*</label>
+    <input type="text" name="name" required>
+
+    <label for="">Email*</label>
+    <input type="email" name="email" required>
+
+    <label for="">Telefone*</label>
+    <input type="text" name="phone" required>
+
+    <label for="">*Campos obrigatórios</label>
+    <input type="submit" value="Enviar">
+</form>
+
+{% if saved %}
+    {% include "partials/modal.html" %}
+{% endif %}
+
+<div></div>
+
+{% endblock form %}
+
+{% block main %}
+
+<main>
+    <article>
+        <h2>Lorem ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+            lobortis nisl ut
+            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+            molestie consequat,
+            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+            praesent
+            luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+    </article>
+
+    <section class="arrow"></section>
+
+    <h2 class="title">Aprenda com quem está no mercado</h2>
+
+    <section class="items">
+        <div class="item">
+            <img src="img/icon.png" alt="">
+            <h2>Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                volelit esse molestie consequat, vel illum dolore
+            </p>
+        </div>
+        <div class="item">
+            <img src="img/icon.png" alt="">
+            <h2>Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                volelit esse molestie consequat, vel illum dolore
+            </p>
+        </div>
+        <div class="item">
+            <img src="img/icon.png" alt="">
+            <h2>Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                volelit esse molestie consequat, vel illum dolore
+            </p>
+        </div>
+    </section>
+</main>
+
+{% endblock main %}

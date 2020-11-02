@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "partials/header.html" %}
+{% endblock header %}
+
+{% block main %}
+    {% if total > 0 %}
+        <h4>{{ total }} devs cadastrados</h4>
+
+        {% for user in users %}
+        <div class="card">
+            <h3>Nome: {{ user.name }}</h3>
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Telefone:</b> {{ user.phone }}</p>
+        </div>
+    {% endfor %}
+
+    {% else %}
+        <h3>Não há devs cadastrados</h3>
+    {% endif %}
+
+{% endblock main %}

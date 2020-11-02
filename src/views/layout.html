@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    {% block title %}
+    <title>Landing Page</title>
+    {% endblock title %}
+</head>
+
+<body>
+
+    <section class="container">
+        {% block header %}
+        {% endblock header %}
+
+        <nav>
+            <img src="" alt="">
+            {% block form %}
+            {% endblock form %}
+        </nav>
+
+        {% block main %}
+        {% endblock main %}
+
+        <footer>
+            <p>
+                Todos os direitos reservados
+            </p>
+            <p>
+                Av. Lorem Ipsum, silor domor 211 - São José de Ribamar MA
+            </p>
+        </footer>
+
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
