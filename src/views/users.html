@@ -1,23 +1,30 @@
 {% extends "layout.html" %}
 
 {% block header %}
-{% include "partials/header.html" %}
+    {% include "partials/header.html" %}
 {% endblock header %}
 
 {% block main %}
-    {% if total > 0 %}
-        <h4>{{ total }} devs cadastrados</h4>
 
-        {% for user in users %}
-        <div class="card">
-            <h3>Nome: {{ user.name }}</h3>
-            <p><b>Email:</b> {{ user.email }}</p>
-            <p><b>Telefone:</b> {{ user.phone }}</p>
-        </div>
-    {% endfor %}
+{% if total > 0 %}
+<section style="background-color: #ddd;">
+<h4>{{ total }} devs cadastrados</h4>
 
-    {% else %}
-        <h3>Não há devs cadastrados</h3>
-    {% endif %}
+<section class="items">
+{% for user in users %}
+
+    <div class="item">
+        <h2>Nome: {{ user.name }}</h2>
+        <p><b>Email:</b> {{ user.email }}</p>
+        <p><b>Telefone:</b> {{ user.phone }}</p>
+    </div>
+
+{% endfor %}
+</section>
+</section>
+
+{% else %}
+    <h3>Não há devs cadastrados</h3>
+{% endif %}
 
 {% endblock main %}

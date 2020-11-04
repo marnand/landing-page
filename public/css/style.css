@@ -28,12 +28,22 @@ section.container {
     flex-wrap: wrap;
 }
 
+header a {
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: #212343;
 }
 
 div.logo {
-    margin: 15px 8%;
+    margin: 15px 0;
 }
 
 nav {
@@ -136,11 +146,15 @@ div.item {
 
 .item > p {
     margin-top: 10px;
-    text-align: justify;
 }
 
 .item > h2 {
     margin: 10px 0;
+    color: #462663;
+}
+
+h4 {
+    margin: 20px 20px 0 20px;
     color: #462663;
 }
 
